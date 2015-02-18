@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear_square">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/textView_vib1"
+            android:background="@drawable/quartet_button_red"
+            android:text="◯"
+            style="@style/quartet_button"
+            />
+        <TextView
+            android:id="@+id/textView_vib2"
+            android:background="@drawable/quartet_button_green"
+            android:text="△"
+            style="@style/quartet_button"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/textView_vib3"
+            android:background="@drawable/quartet_button_bg"
+            android:text="×"
+            style="@style/quartet_button"
+            />
+        <TextView
+            android:id="@+id/textView_vib4"
+            android:background="@drawable/quartet_button_yellow"
+            android:text="□"
+            style="@style/quartet_button"
+            />
+    </LinearLayout>
+</LinearLayout>
