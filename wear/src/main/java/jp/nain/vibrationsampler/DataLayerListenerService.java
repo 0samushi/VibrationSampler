@@ -18,6 +18,9 @@ import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.WearableListenerService;
 
 public class DataLayerListenerService extends WearableListenerService {
+
+    private static final long[] NO_VIBRATION = {0};
+
     @Override
     public void onDataChanged(DataEventBuffer dataEvents) {
         Log.i("NAIN", "データチェンジド");
@@ -34,7 +37,7 @@ public class DataLayerListenerService extends WearableListenerService {
                             .setSmallIcon(R.mipmap.ic_launcher)
                             .setContentTitle("モバイルから通知")
                             .setContentText("サンプルテキスト")
-                            .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE | Notification.DEFAULT_LIGHTS)
+                            .setDefaults(Notification.DEFAULT_SOUND| Notification.DEFAULT_LIGHTS)
                             .setLocalOnly(true);
 
                     switch (index) {
@@ -42,21 +45,25 @@ public class DataLayerListenerService extends WearableListenerService {
                             vibrator.vibrate(MainActivity.VIBRATE_PATTERN1, -1);
                             builder.setContentText("◯");
                             builder.setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.box_red));
+                            builder.setVibrate(NO_VIBRATION);
                             break;
                         case 2:
                             vibrator.vibrate(MainActivity.VIBRATE_PATTERN2, -1);
                             builder.setContentText("△");
                             builder.setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.box_green));
+                            builder.setVibrate(NO_VIBRATION);
                             break;
                         case 3:
                             vibrator.vibrate(MainActivity.VIBRATE_PATTERN3, -1);
                             builder.setContentText("×");
                             builder.setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.box_blue));
+                            builder.setVibrate(NO_VIBRATION);
                             break;
                         case 4:
                             vibrator.vibrate(MainActivity.VIBRATE_PATTERN4, -1);
                             builder.setContentText("□");
                             builder.setLargeIcon(BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.box_yellow));
+                            builder.setVibrate(NO_VIBRATION);
                             break;
                         default:break;
                     }
