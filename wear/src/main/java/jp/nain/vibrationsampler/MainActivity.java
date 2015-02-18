@@ -22,10 +22,10 @@ public class MainActivity extends Activity {
     /** バイブレーションをリピートしない */
     private static final int DISABLE_REPEATING = -1;
     /** バイブレーションをミリ秒単位で指定。 {OFF, ON, OFF, ON, ...} */
-    private static final long[] VIBRATE_PATTERN1 = {0, 200, 300, 200, 300, 200};
-    private static final long[] VIBRATE_PATTERN2 = {0, 800, 300, 800};
-    private static final long[] VIBRATE_PATTERN3 = {0, 1600};
-    private static final long[] VIBRATE_PATTERN4 = {0, 400};
+    public static final long[] VIBRATE_PATTERN1 = {0, 200, 300, 200, 300, 200};
+    public static final long[] VIBRATE_PATTERN2 = {0, 800, 300, 800};
+    public static final long[] VIBRATE_PATTERN3 = {0, 1600};
+    public static final long[] VIBRATE_PATTERN4 = {0, 400};
 
     //-------------------------------------------------
     // フィールド

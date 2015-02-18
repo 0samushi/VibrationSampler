@@ -24,17 +24,21 @@ public class MainActivity extends ActionBarActivity {
     @OnClick(R.id.textView_vib1)
     public void onClickVib1 (){
         Log.i("NAIN", "クリック1");
+        NotificationIntentService.startActionSend(this, 1);
     }
     @OnClick(R.id.textView_vib2)
     public void onClickVib2 () {
         Log.i("NAIN", "クリック2");
+        NotificationIntentService.startActionSend(this, 2);
     }
     @OnClick(R.id.textView_vib3)
     public void onClickVib3 () {
         Log.i("NAIN", "クリック3");
+        NotificationIntentService.startActionSend(this, 3);
     }
     @OnClick(R.id.textView_vib4)
     public void onClickVib4 () {
         Log.i("NAIN", "クリック4");
+        NotificationIntentService.startActionSend(this, 4);
     }
 }
