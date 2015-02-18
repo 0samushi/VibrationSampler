@@ -3,6 +3,7 @@ package jp.nain.vibrationsampler;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -20,10 +21,20 @@ public class MainActivity extends ActionBarActivity {
         ButterKnife.inject(this);
     }
 
-    @OnClick(R.id.button_vibration1)
+    @OnClick(R.id.textView_vib1)
     public void onClickVib1 (){
-        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-        long[] pattern = {3000, 1000, 2000, 500, 3000, 1000}; // OFF, ON, OFF, ON, ...
-        vibrator.vibrate(pattern, DISABLE_REPEATING);
+        Log.i("NAIN", "クリック1");
+    }
+    @OnClick(R.id.textView_vib2)
+    public void onClickVib2 () {
+        Log.i("NAIN", "クリック2");
+    }
+    @OnClick(R.id.textView_vib3)
+    public void onClickVib3 () {
+        Log.i("NAIN", "クリック3");
+    }
+    @OnClick(R.id.textView_vib4)
+    public void onClickVib4 () {
+        Log.i("NAIN", "クリック4");
     }
 }
